@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> photos
+    <script>
+
+    var num1 = prompt("Enter starting Employee id number");
+    var num2 = prompt("Enter Ending Employee id number");
+    var i = parseInt(num1);
+ 	var y = parseInt(num2);
+    var a = "http://portal/NewPortal/Images/PICS/";
+    var b = ".jpg";
+    c = a + i + b;
+    setInterval(function() {
+        if (i < y) {
+            c = a + i + b;
+            i += 1;
+            console.log("emp Id:"+i);
+            document.getElementById("all").src=c;
+        } else {
+            return;
+        }
+    }, 1000);
+    </script>
+    <style>
+    #all {
+        background-color: grey;
+        width: 800px;
+        height: 800px;
+        border: 1px solid black;
+    };
+      
+    </style>
+</head>
+
+<body>
+
+
+    <iframe id="all" name="helloframe">
+     
+    </iframe>
+
+
+</body>
+
+</html>
